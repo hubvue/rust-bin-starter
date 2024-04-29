@@ -1,5 +1,5 @@
 # [name]
-## Install 
+## Install
 
 ```bash
 # install pre-commit
@@ -15,7 +15,7 @@ cargo install typos-cli
 cargo install git-cliff
 
 # install nextest
-cargo install --locked  cargo-nextest 
+cargo install --locked  cargo-nextest
 ```
 
 ## Initial
@@ -33,5 +33,10 @@ cargo run
 
 ## Test
 ```bash
-cargo nextest
+cargo nextest run
+```
+
+## Build
+```bash
+cargo build --release
 ```
