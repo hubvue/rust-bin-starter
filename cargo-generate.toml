@@ -1,6 +1,6 @@
 [template]
 cargo_generate_version = ">=0.10.0"
-include = ["Cargo.toml", "README.md"]
+include = ["Cargo.toml", "README.md", '.pre-commit-config.yaml']
 ignore = ["LICENSE", "CHANGELOG.md"]
 
 [placeholders]
