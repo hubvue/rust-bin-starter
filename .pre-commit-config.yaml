@@ -25,13 +25,13 @@ repos:
         files: \.rs$
         args: []
       {% if deny %}
-      # - id: cargo-deny
-      #   name: cargo deny check
-      #   description: Check cargo dependencies
-      #   entry: bash -c 'cargo deny check -d'
-      #   language: rust
-      #   files: \.rs$
-      #   args: []
+      - id: cargo-deny
+        name: cargo deny check
+        description: Check cargo dependencies
+        entry: bash -c 'cargo deny check -d'
+        language: rust
+        files: \.rs$
+        args: []
       {% endif %}
       {% if typos %}
       - id: typos
