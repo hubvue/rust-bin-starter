@@ -4,10 +4,24 @@ include = ["Cargo.toml", "README.md"]
 ignore = ["LICENSE", "CHANGELOG.md"]
 
 [placeholders]
-pre_commit = { prompt = "Use pre-commit?", default = true, type = "boolean"}
+pre_commit = { prompt = "Use pre-commit?", default = true, type = "bool"}
+
+[conditional.'pre_commit'.placeholders]
+deny = { prompt = "Use cargo deny check?", default = true, type = "bool"}
+typos = { prompt = "Use typos-cli check?", default = true, type = "bool"}
+cliff = { prompt = "Use git cliff generate CHANGELOG?", default = true, type = "bool"}
 
 [conditional.'!pre_commit']
 ignore = [".pre-commit-config.yaml"]
+
+[conditional.'!deny']
+ignore = ["deny.toml"]
+
+[conditional.'!types']
+ignore = ["_typos.toml"]
+
+[conditional.'!cliff']
+ignore = ["cliff.toml"]
 
 # [conditional.'pre_commit'.placeholders]
 # project_name = { prompt = "Enter project name", default = "my_project", type = "string" }

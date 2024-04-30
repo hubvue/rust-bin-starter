@@ -24,6 +24,7 @@ repos:
         language: rust
         files: \.rs$
         args: []
+      {% if deny %}
       # - id: cargo-deny
       #   name: cargo deny check
       #   description: Check cargo dependencies
@@ -31,6 +32,8 @@ repos:
       #   language: rust
       #   files: \.rs$
       #   args: []
+      {% endif %}
+      {% if typos %}
       - id: typos
         name: typos
         description: check typo
@@ -38,6 +41,7 @@ repos:
         language: rust
         files: \.*$
         pass_filenames: false
+      {% endif %}
       - id: cargo-check
         name: cargo check
         description: Check the package for errors.
