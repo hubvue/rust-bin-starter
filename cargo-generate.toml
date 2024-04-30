@@ -4,7 +4,7 @@ include = ["Cargo.toml", "README.md"]
 ignore = ["LICENSE", "CHANGELOG.md"]
 
 [placeholders]
-pre_commit = { prompt = "Use pre-commit?", chices = [true, false], default = true, type = "boolean"}
+pre_commit = { prompt = "Use pre-commit?", chices = ["Yes", "No"], default = "Yes", type = "string"}
 
 [conditional.'!pre_commit']
 ignore = [".pre-commit-config.yaml"]
