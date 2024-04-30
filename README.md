@@ -1,4 +1,11 @@
 # {{project-name}}
+
+## Usage
+```bash
+cargo install cargo-generate
+cargo generate hubvue/rust-starter
+```
+
 ## Install
 
 ```bash
