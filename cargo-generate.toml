@@ -1,2 +1,15 @@
 [template]
-exclude = ["LICENSE", "CHANGELOG.md"]
+cargo_generate_version = ">=0.10.0"
+include = ["Cargo.toml", "README.md"]
+ignore = ["LICENSE", "CHANGELOG.md"]
+
+[placeholders]
+pre_commit = { prompt = "Use pre-commit?", chices = ["Yes", "No"], default = "Yes", type = "boolean"}
+
+[conditional.'!pre_commit']
+ignore = [".pre-commit-config.yaml"]
+
+[conditional.'pre_commit'.placeholders]
+project_name = { prompt = "Enter project name", default = "my_project", type = "string" }
+use_git = { prompt = "Initialize Git repository?", choices = ["Yes", "No"], default = "Yes", type = "boolean" }
+phone_number = { prompt = "What's your phone number?", type = "string", regex = "^[0-9]+$" }
