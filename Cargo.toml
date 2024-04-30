@@ -1,7 +1,12 @@
 [package]
 name = "{{crate_name}}"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+authors = ["{{authors}}"]
+description = ""
+license = "MIT"  # https://spdx.org/licenses/
+keywords = []  # free text
+categories = []  # https://crates.io/category_slugs
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 {% if crate_type == "bin" %}
