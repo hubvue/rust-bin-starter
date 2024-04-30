@@ -1,4 +1,4 @@
-# {{project_name}}
+# {{crate_name}}
 ## Install
 
 ```bash
